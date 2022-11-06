@@ -1,0 +1,24 @@
+{
+  "name": "node-valve-lzss",
+  "version": "0.0.1",
+  "description": "Bindings for Valve's LZSS compression codec",
+  "main": "index.js",
+  "homepage": "https://gitlab.com/PANCHO7532/node-valve-lzss",
+  "repository": {
+    "type": "git",
+    "url": "git://gitlab.com/PANCHO7532/node-valve-lzss.git"
+  },
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "build": "node-gyp clean configure build",
+    "build:dev": "node-gyp clean configure build --debug",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PANCHO7532",
+  "license": "MIT",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "nan": "^2.17.0"
+  },
+  "gypfile": true
+}
