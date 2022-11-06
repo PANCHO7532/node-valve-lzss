@@ -26,7 +26,6 @@ For unknown reasons, certain data can't be compressed and the library will throw
 The solution to these cases is up to you, some tips would be padding the data, splitting into chunks, etc. Probably such errors would stay unfixed as I don't have the current knowledge yet to track these bugs and fix them in an appropriate way.
 
 For your own sanity, please DON'T use this in production code UNLESS you know what are you doing.
-### NOTE: This project was tested only on Linux systems, if you have Windows and can't install, feel free to open an issue.
 
 ## Contributions
 Contributions are welcome! But please detail them as good as possible. Since this is an quite cryptic project and a lot of things can go wrong, you should do it.

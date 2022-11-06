@@ -12,6 +12,8 @@
     "install": "node-gyp rebuild",
     "build": "node-gyp clean configure build",
     "build:dev": "node-gyp clean configure build --debug",
+    "build32": "node-gyp clean configure build --arch=ia32",
+    "build32:dev": "node-gyp clean configure build --debug --arch=ia32",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "PANCHO7532",
@@ -20,5 +22,12 @@
     "bindings": "^1.5.0",
     "nan": "^2.17.0"
   },
+  "keywords": [
+    "lzss",
+    "valve",
+    "compression",
+    "codec",
+    "source"
+  ],
   "gypfile": true
 }
