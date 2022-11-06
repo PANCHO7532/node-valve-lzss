@@ -65,7 +65,7 @@ inline T DWordSwap360Intr(T dw)
 	return output;
 }
 
-#elif defined( _MSC_VER ) && !defined( _M_X64 ) || (defined(_M_X64) && _M_X64 == 1)
+#elif defined( _MSC_VER ) && !defined( _M_X64 ) || (defined(_M_X64) && _M_X64 == 0)
 // We will compile this only on x86 hosts
 // Not entirely sure about the utility of this code, probably I'll remove later
 
@@ -217,7 +217,8 @@ void CLZSS::BuildHash( unsigned char *pData )
 
 unsigned char *CLZSS::CompressNoAlloc( unsigned char *pInput, int inputLength, unsigned char *pOutputBuf, unsigned int *pOutputSize )
 {
-	if ( inputLength <= sizeof( lzss_header_t ) + 8 )
+	// P7: I don't think an cast to an int from unsigned int should be harmful in this context, fix if you get problems.
+	if ( (unsigned int)inputLength <= sizeof( lzss_header_t ) + 8 )
 	{
 		CLZSS::ErrorCode = 1;
 		return 0;

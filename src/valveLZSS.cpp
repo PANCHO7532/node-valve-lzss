@@ -61,7 +61,7 @@ NAN_METHOD(uncompress) {
     // Return the decompressed value
     v8::Local<v8::Object> newBuffer = Nan::NewBuffer(uncompressedDataLength).ToLocalChecked();
     memcpy(node::Buffer::Data(newBuffer), rawDataOutput, uncompressedDataLength);
-    delete rawDataOutput;
+    delete[] rawDataOutput;
     info.GetReturnValue().Set(newBuffer);
 }
 NAN_METHOD(isCompressed) {
