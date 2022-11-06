@@ -217,7 +217,7 @@ void CLZSS::BuildHash( unsigned char *pData )
 
 unsigned char *CLZSS::CompressNoAlloc( unsigned char *pInput, int inputLength, unsigned char *pOutputBuf, unsigned int *pOutputSize )
 {
-	// P7: I don't think an cast to an int from unsigned int should be harmful in this context, fix if you get problems.
+	// P7: I don't think an cast to an unsigned int from an int should be harmful in this context, fix if you get problems.
 	if ( (unsigned int)inputLength <= sizeof( lzss_header_t ) + 8 )
 	{
 		CLZSS::ErrorCode = 1;
