@@ -65,7 +65,9 @@ inline T DWordSwap360Intr(T dw)
 	return output;
 }
 
-#elif defined( _MSC_VER )
+#elif defined( _MSC_VER ) && !defined( _M_X64 ) || (defined(_M_X64) && _M_X64 == 1)
+// We will compile this only on x86 hosts
+// Not entirely sure about the utility of this code, probably I'll remove later
 
 #define WordSwap  WordSwapAsm
 #define DWordSwap DWordSwapAsm

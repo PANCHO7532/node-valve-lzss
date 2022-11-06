@@ -1,6 +1,6 @@
 {
   "name": "node-valve-lzss",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bindings for Valve's LZSS compression codec",
   "main": "index.js",
   "homepage": "https://gitlab.com/PANCHO7532/node-valve-lzss",
